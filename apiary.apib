@@ -56,7 +56,7 @@ Folders available to user within one of their authenticated source service.
 
 ### List All Folders [GET]
 
-Returns a list of all available folders within a document source. 
+Returns a list of all available folders within a document source.
 
 + Response 200 (application/json)
 
@@ -72,7 +72,7 @@ Returns a list of all available folders within a document source.
                 "url": "https://evernote.com/notebook?guid=ABCDEFGHI"
             }
         ]
-        
+
 ### Get specific folder [GET /sources/{sourceId}/folders/{folderId}]
 
 Returns a folder with the specified id
@@ -80,7 +80,7 @@ Returns a folder with the specified id
 + Parameters
     + sourceId: `evernote` (string) - Id of the document source service
     + folderId: `1` (number) - Id of the desired folder
-    
+
 + Response 200 (application/json)
 
         {
@@ -136,7 +136,7 @@ Returns a list of all available task targets.
 
 ### List All Folders [GET /targets/{targetId}/folders]
 
-Returns a list of all available folders within a document source. 
+Returns a list of all available folders within a document source.
 
 + Response 200 (application/json)
 
@@ -160,7 +160,7 @@ Returns a folder with the specified id
 + Parameters
     + targetId: `todoist` (string) - Id of the task target service
     + folderId: `1` (number) - Id of the desired folder
-    
+
 + Response 200 (application/json)
 
         {
@@ -197,7 +197,7 @@ Create a new folder with a given name. Returns a corresponding folder object.
 
 ### List All Integrations [GET /integrations]
 
-Returns a list of all configured integrations for the current user. 
+Returns a list of all configured integrations for the current user.
 
 TODO: Confirm the desirable date format
 
@@ -208,8 +208,10 @@ TODO: Confirm the desirable date format
                 "id": 1,
                 "sourceServiceId": "evernote",
                 "sourceFolderId": 1,
+                "sourceFolderName": "Death Star Project",
                 "targetServiceId": "todoist",
                 "targetFolderId": 1,
+                "targetFolderName": "Death Star",
                 "lastSyncDate": "Sat Mar 05 2016 20:58:10 GMT+0100 (CET)",
                 "lastSyncStatus": "ok"
             },
@@ -217,8 +219,10 @@ TODO: Confirm the desirable date format
                 "id": 2,
                 "sourceServiceId": "evernote",
                 "sourceFolderId": 2,
+                "sourceFolderName": "Garage Sale Inventory",
                 "targetServiceId": "todoist",
                 "targetFolderId": 2,
+                "targetFolderName": "Garage Sale",
                 "lastSyncDate": null,
                 "lastSyncStatus": null
             }
@@ -232,10 +236,11 @@ Create a new integration between the given source and target folders.
 
         {
             "sourceServiceId": "evernote",
-            "sourceFolderId": 3,
+            "sourceFolderId": 1,
             "targetServiceId": "todoist",
             "targetFolderId": 3,
             "options": {
+                tags: [ "@birthday" ]
             }
         }
 
@@ -250,16 +255,18 @@ Create a new integration between the given source and target folders.
             {
                 "id": 3,
                 "sourceServiceId": "evernote",
-                "sourceFolderId": 3,
+                "sourceFolderId": 1,
+                "sourceFolderName": "Death Star Project",
                 "targetServiceId": "todoist",
                 "targetFolderId": 3,
+                "targetFolderName": "Luke's Birthday",
                 "lastSyncDate": null,
                 "lastSyncStatus": null
             }
 
 ### Get a Specific Integration [GET /integrations/{integrationId}]
 
-Returns an integration with the given id. 
+Returns an integration with the given id.
 
 + Parameters
     + integrationId: 1 (number) - Integration's ID
