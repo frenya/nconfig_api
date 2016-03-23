@@ -208,8 +208,10 @@ TODO: Confirm the desirable date format
                 "id": 1,
                 "sourceServiceId": "evernote",
                 "sourceFolderId": 1,
+                "sourceFolderName": "Death Star Project",
                 "targetServiceId": "todoist",
                 "targetFolderId": 1,
+                "targetFolderName": "Death Star",
                 "lastSyncDate": "Sat Mar 05 2016 20:58:10 GMT+0100 (CET)",
                 "lastSyncStatus": "ok"
             },
@@ -217,8 +219,10 @@ TODO: Confirm the desirable date format
                 "id": 2,
                 "sourceServiceId": "evernote",
                 "sourceFolderId": 2,
+                "sourceFolderName": "Garage Sale Inventory",
                 "targetServiceId": "todoist",
                 "targetFolderId": 2,
+                "targetFolderName": "Garage Sale",
                 "lastSyncDate": null,
                 "lastSyncStatus": null
             }
@@ -232,10 +236,11 @@ Create a new integration between the given source and target folders.
 
         {
             "sourceServiceId": "evernote",
-            "sourceFolderId": 3,
+            "sourceFolderId": 1,
             "targetServiceId": "todoist",
             "targetFolderId": 3,
             "options": {
+                tags: [ "@birthday" ]
             }
         }
 
@@ -250,9 +255,11 @@ Create a new integration between the given source and target folders.
             {
                 "id": 3,
                 "sourceServiceId": "evernote",
-                "sourceFolderId": 3,
+                "sourceFolderId": 1,
+                "sourceFolderName": "Death Star Project",
                 "targetServiceId": "todoist",
                 "targetFolderId": 3,
+                "targetFolderName": "Luke's Birthday",
                 "lastSyncDate": null,
                 "lastSyncStatus": null
             }
