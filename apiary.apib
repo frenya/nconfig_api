@@ -213,7 +213,10 @@ TODO: Confirm the desirable date format
                 "targetFolderId": 1,
                 "targetFolderName": "Death Star",
                 "lastSyncDate": "Sat Mar 05 2016 20:58:10 GMT+0100 (CET)",
-                "lastSyncStatus": "ok"
+                "lastSyncStatus": "ok",
+                "title": "Death Star Project to Death Star",
+                "enabled": true,
+                "running": true
             },
             {
                 "id": 2,
@@ -224,7 +227,10 @@ TODO: Confirm the desirable date format
                 "targetFolderId": 2,
                 "targetFolderName": "Garage Sale",
                 "lastSyncDate": null,
-                "lastSyncStatus": null
+                "lastSyncStatus": null,
+                "title": "Garage Sale",
+                "enabled": true,
+                "running": false
             }
         ]
 
@@ -261,7 +267,10 @@ Create a new integration between the given source and target folders.
                 "targetFolderId": 3,
                 "targetFolderName": "Luke's Birthday",
                 "lastSyncDate": null,
-                "lastSyncStatus": null
+                "lastSyncStatus": null,
+                "title": "Death Star Project to Luke's Birthday",
+                "enabled": true,
+                "running": false
             }
 
 ### Get a Specific Integration [GET /integrations/{integrationId}]
@@ -280,7 +289,10 @@ Returns an integration with the given id.
             "targetServiceId": "todoist",
             "targetFolderId": 1,
             "lastSyncDate": "Sat Mar 05 2016 20:58:10 GMT+0100 (CET)",
-            "lastSyncStatus": "ok"
+            "lastSyncStatus": "ok",
+            "title": "Death Star Project to Death Star",
+            "enabled": true,
+            "running": true
         }
 
 ### Delete an Integration [DELETE /integrations/{integrationId}]
@@ -303,7 +315,10 @@ implementing the API, simply ignore them.
             "targetServiceId": "todoist",
             "targetFolderId": 2,
             "lastSyncDate": null,
-            "lastSyncStatus": null
+            "lastSyncStatus": null,
+            "title": "Garage Sale",
+            "enabled": true,
+            "running": false
         }
 
 ## DropBox Folders Collection [GET /sources/dropbox/folders]
