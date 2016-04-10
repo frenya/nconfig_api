@@ -295,6 +295,23 @@ Returns an integration with the given id.
             "running": true
         }
 
+### Update a Specific Integration [PATCH /integrations/{integrationId}]
+
+Updates the title or running status of an integration with the given id.
+
++ Parameters
+    + integrationId: 1 (number) - Integration's ID
+
++ Request (application/json)
+
+        {
+            "title": "New title",
+            "running": true
+        }
+
++ Response 204
+
+
 ### Delete an Integration [DELETE /integrations/{integrationId}]
 
 + Response 204
